@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: psplussize-com-tls
+spec:
+  secretName: psplussize-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: psplussize.com
+  dnsNames:
+    - psplussize.com
+    - www.psplussize.com
